@@ -23,3 +23,16 @@ self.addEventListener('fetch', function(e) {
     })
   );
 });
+
+self.addEventListener('push', function(event) {
+    console.log('[Service Worker] Push Received.');
+    console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+  
+    const title = 'Credit Card Alerts';
+    const options = {
+      body: 'Did you make the recent purchase of 345$ from McDonalds?',
+      icon: 'images/c1-icon-120.png'
+    };
+  
+    event.waitUntil(self.registration.showNotification(title, options));
+  });
