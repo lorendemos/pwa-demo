@@ -34,3 +34,13 @@ body {
       transition: all 1s ease-in;
       overflow: hidden;
   }
+
+  pre {
+    white-space: pre-wrap;
+    background-color: #EEEEEE;
+    padding: 16px;
+  }
+  
+  pre code {
+    word-break: break-word;
+  }

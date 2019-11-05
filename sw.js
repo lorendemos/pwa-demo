@@ -30,7 +30,7 @@ self.addEventListener('push', function(event) {
   
     const title = 'Credit Card Alerts';
     const options = {
-      body: 'Did you make the recent purchase of 345$ from McDonalds?',
+      body: event.data.text(),
       icon: 'images/c1-icon-120.png'
     };
   
