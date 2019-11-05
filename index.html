@@ -27,8 +27,24 @@
     </div>
     <Button id="subscribeBtn">Receive Alerts</Button>
     <pre><code id="subscriptionJson"></code></pre>
+    <div id="checkDeposit">
+        <h2>Check Deposit</h2>
+        <button id="depositButton">Remote Deposit</button>
+        <div id="depositScreen" class="removed">
+            <div class="camera">
+                <video id="video">Video stream not available.</video>
+                <button" id="startbutton">Take photo</button> 
+            </div>
+            <canvas id="canvas">
+            </canvas>
+            <div class="output">
+                <img id="photo" alt="The screen capture will appear in this box."> 
+            </div>
+        </div>
+    </div>
   </div>
   <script src="js/main.js"></script>
   <script src="js/install.js"></script>
+  <script src="js/capture.js"></script>
 </body>
 </html>

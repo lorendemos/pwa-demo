@@ -1,6 +1,8 @@
 window.onload = () => {
     'use strict';
     const pushButton = document.querySelector('#subscribeBtn');
+    const depositButton = document.querySelector('#depositButton');
+    const depositScreen = document.querySelector('#depositScreen');
     const subscriptionJson = document.querySelector('#subscriptionJson');
     const applicationServerPublicKey = 'BDNW8bT8KzNeEjbHdBu7zFjDKwB1JaEYYMzPqvAQnv6Dvtb532vapJB2-stqbjWCa7YRkYYQgLx1DNcpbGRNm-A';
     let isSubscribed = false;
@@ -21,6 +23,11 @@ window.onload = () => {
       }
 
     function initializeUI() {
+
+        depositButton.addEventListener('click', function(){
+            depositScreen.classList.toggle('removed');
+            depositScreen.classList.contains('removed') ? depositButton.textContent='Remote Deposit' : depositButton.textContent = 'Done';
+        })
 
         pushButton.addEventListener('click', function() {
             pushButton.disabled = true;
